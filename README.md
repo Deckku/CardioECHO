@@ -1,9 +1,9 @@
-# CardioECHO: Intelligent Data Extraction from Echocardiogram Images and Videos
+# CardioECHO: Precision Cardiology through Artificial Intelligence
 
 ## Overview
 CardioECHO is a desktop application designed to automate the assessment of cardiac function from echocardiogram videos. Developed using Python, PyTorch, and PyQt6, the system leverages deep learning models to segment the Left Ventricle (LV) and calculate critical clinical metrics, including Ejection Fraction (EF), End-Systolic Volume (ESV), and End-Diastolic Volume (EDV).
 
-This repository contains the source code and the pre-trained model weights required to run or build the application.
+This repository contains the source code for the application. Due to the high storage requirements of high-performance deep learning models, the model weights are hosted externally.
 
 ## Key Features
 * **Automated Analysis:** Uses deep learning to process AVI/MP4 echocardiogram videos.
@@ -17,7 +17,8 @@ This repository contains the source code and the pre-trained model weights requi
 
 ### Prerequisites
 * Python 3.8 or higher
-* CUDA-capable GPU (Recommended for faster inference, but runs on CPU)
+* CUDA-capable GPU (Recommended for faster inference)
+* Internet connection (to download model weights)
 
 ### Setup Steps
 1.  **Clone the repository:**
@@ -27,25 +28,28 @@ This repository contains the source code and the pre-trained model weights requi
     ```
 
 2.  **Install dependencies:**
-    You can install the required libraries using the following command:
-    ```bash
-    pip install numpy opencv-python torch torchvision pydicom reportlab matplotlib PyQt6
-    ```
-    
-    *Or if you prefer using a file, create a `requirements.txt` with the above libraries and run:*
     ```bash
     pip install -r requirements.txt
     ```
+    *OR run:*
+    ```bash
+    pip install numpy opencv-python torch torchvision pydicom reportlab matplotlib PyQt6
+    ```
 
-3.  **Verify Model Files:**
-    Ensure the following three model files (included in this repository) are located in the root folder with the script:
-    * `deeplabv3_resnet50_random.pt`
-    * `mc3_esv_small_best.pth`
-    * `best.pt`
+3.  **Download Model Weights (Required):**
+    The application requires three pre-trained model files (~600 MB total).
+    
+    1.  Download the files from this link: **https://drive.google.com/drive/folders/17QpRCyoG1jDRxe4NjTJuRY2KwkoM5RPy?usp=sharing**
+    2.  Place the downloaded files in the **root directory** of this project (the same folder as `main_app_final.py`).
+    3.  Ensure the filenames are exactly as follows:
+        * `segmentation.pt`
+        * `esv.pth`
+        * `ef.pt`
 
 ## Usage
 
-To run the application directly from the Python script:
+### Running the Python Script
+Once the dependencies are installed and models are placed in the root folder, run:
 
 ```bash
-python main.py
+python main_app_final.py
