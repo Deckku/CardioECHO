@@ -1,0 +1,8 @@
+numpy
+opencv-python
+torch
+torchvision
+pydicom
+reportlab
+matplotlib
+PyQt6
