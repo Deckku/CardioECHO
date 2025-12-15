@@ -23,7 +23,7 @@ This repository contains the source code for the application. Due to the high st
 ### Setup Steps
 1.  **Clone the repository:**
     ```bash
-    git clone [https://github.com/your-username/CardioECHO.git](https://github.com/your-username/CardioECHO.git)
+    git clone https://github.com/Deckku/CardioECHO.git
     cd CardioECHO
     ```
 
