@@ -98,7 +98,7 @@ If you wish to create a standalone Windows executable (.exe) so the application 
 * **main_app_final.py:** The entry point for the GUI application and analysis logic
 * **Report.pdf:** Comprehensive project documentation and feasibility analysis
 * **requirements.txt:** List of Python library dependencies
-* **.gitignore:** Configuration to exclude build artifacts and large model files from the repository
+* **TEST_VIDEOS:** A selection of .avi AC4 files for testing the app
 
 ---
 
